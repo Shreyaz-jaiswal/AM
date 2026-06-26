@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: #ffe6e6; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            overflow: hidden; 
+        }
+        .container { 
+            text-align: center; 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(255, 77, 77, 0.2); 
+            max-width: 400px; 
+            width: 85%; 
+            transition: all 0.5s ease;
+        }
+        h1 { 
+            color: #ff4d4d; 
+            font-size: 24px; 
+            margin-bottom: 20px; 
+            transition: opacity 0.5s ease;
+        }
+        p { 
+            color: #444; 
+            font-size: 16px; 
+            line-height: 1.6; 
+            display: none; 
+            animation: fadeIn 1s ease-in;
+        }
+        .poem {
+            font-style: italic;
+            color: #d63031;
+            font-weight: 500;
+            margin: 15px 0;
+            display: block;
+        }
+        .btn { 
+            background-color: #ff4d4d; 
+            color: white; 
+            border: none; 
+            padding: 12px 28px; 
+            font-size: 16px; 
+            border-radius: 25px; 
+            cursor: pointer; 
+            transition: 0.3s; 
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+        }
+        .btn:hover { 
+            background-color: #e60000; 
+            transform: scale(1.05); 
+        }
+        .heart { 
+            font-size: 60px; 
+            color: #ff4d4d; 
+            animation: beat 1s infinite alternate; 
+            margin-bottom: 10px; 
+        }
+        @keyframes beat { 
+            to { transform: scale(1.15); } 
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="card">
+        <div class="heart">❤️</div>
+        <h1 id="title">I have something to tell you...</h1>
+        
+        <button class="btn" id="openBtn" onclick="showMessage()">Open Message</button>
+        
+        <p id="message">
+            Every time I see you, my day gets a little bit brighter. You are the one for whom i prayed for, the one for whom i cried, the one for whom i tried not giving up. <br>
+            Even after you rejected me i didn't gave up , because loving you was not a deal for me, it is some thing that I can't express you through these messages. <br>
+            I don't force you to love me the same way i love you, but you should know that if i had a 100 lives i would love you the way i love now. But if i had none lives, you couldn't find someone who will love you the same way i love. <br>
+            Even if had a worse day, seeing you smile makes my day. I was a student who had a 60-70% school attendance, but your presence changed ot into 100% . I come to coaching classes just to see you, even if you don't talk with me, even if you don't care about me.<br>
+            I reach my home lately just to go along with you for a 5-10 minutes, those 5-10 minutes make my whole day. I really believe in you with my pure heart. <br>
+            I have much more words but i can't express you right now. Even if don't talk to me, seeing you charming makes me full. Sorry for distributing you through these messages but <br>
+            If you are not interested in this, i would go back right now. But remember that i'd be waiting here for you till i meet my end. 
+            <span class="poem">"Some words are hard to say out loud, so I put them here instead."</span>
+            
+            
+           
+        </p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('title').innerText = "You're truly special.";
+            document.getElementById('openBtn').style.display = 'none';
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
